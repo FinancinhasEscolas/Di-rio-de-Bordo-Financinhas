@@ -59,70 +59,22 @@ body{font-family:'Nunito',sans-serif;color:var(--text);display:flex;flex-directi
 .li-escola{font-size:0.73rem;font-weight:600;color:var(--text-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:6px;}
 .li-data{font-size:0.68rem;color:var(--text-muted);}
 .empty-state{text-align:center;padding:56px 28px;color:var(--text-muted);}
-.empty-state .ei{font-size:3rem;margin-bottom:12px;}
-.empty-state p{font-size:0.84rem;line-height:1.7;}
-.form-topbar{padding:48px 20px 12px;background:var(--surface);display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
-.btn-cancel{background:none;border:none;font-family:'Nunito',sans-serif;font-size:0.9rem;font-weight:700;color:var(--text-muted);cursor:pointer;}
-.btn-submit{background:none;border:none;font-family:'Nunito',sans-serif;font-size:0.9rem;font-weight:900;color:var(--teal);cursor:pointer;}
-.form-topbar h2{font-size:0.92rem;font-weight:900;}
-.form-body{flex:1;overflow-y:auto;padding:18px;}
-.form-body::-webkit-scrollbar{width:3px;}
-.form-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
-.photo-upload{border:2px dashed var(--border);border-radius:var(--radius-sm);padding:18px;text-align:center;cursor:pointer;transition:border-color 0.2s;position:relative;}
-.photo-upload:hover{border-color:var(--teal);}
-.photo-upload input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
-.photo-upload .pu-icon{font-size:1.7rem;margin-bottom:4px;}
-.photo-upload p{font-size:0.76rem;color:var(--text-muted);}
-.photo-upload strong{color:var(--teal);}
-.photos-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
-.photo-thumb-wrap{position:relative;}
-.photo-thumb{width:70px;height:70px;border-radius:8px;object-fit:cover;border:2px solid var(--border);}
-.photo-rm{position:absolute;top:-5px;right:-5px;background:var(--danger);color:white;border:none;border-radius:50%;width:18px;height:18px;font-size:0.6rem;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-.loading-overlay{position:fixed;inset:0;background:rgba(13,31,26,0.88);z-index:9997;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;opacity:0;pointer-events:none;transition:opacity 0.2s;}
-.loading-overlay.show{opacity:1;pointer-events:all;}
-.spinner{width:44px;height:44px;border:4px solid var(--border);border-top-color:var(--teal);border-radius:50%;animation:spin 0.8s linear infinite;}
-@keyframes spin{to{transform:rotate(360deg);}}
-.loading-overlay p{font-size:0.88rem;font-weight:800;color:var(--text-dim);}
-.detail-topbar{padding:48px 20px 12px;background:var(--surface);display:flex;align-items:center;gap:12px;flex-shrink:0;}
-.btn-back{background:var(--surface2);border:1.5px solid var(--border);color:var(--text);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;flex-shrink:0;}
-.detail-body{flex:1;overflow-y:auto;}
-.detail-body::-webkit-scrollbar{width:3px;}
-.detail-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
-.detail-photo-area{width:100%;height:190px;background:var(--surface2);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;}
-.detail-photo-area img{width:100%;height:100%;object-fit:cover;}
-.detail-photo-area .no-photo{color:var(--text-muted);font-size:3rem;}
-.detail-escola-label{position:absolute;bottom:10px;left:14px;background:rgba(0,0,0,0.7);color:white;padding:3px 11px;border-radius:20px;font-size:0.72rem;font-weight:800;backdrop-filter:blur(4px);}
-.detail-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px 20px;border-bottom:1px solid var(--border);}
-.btn-action{background:var(--surface2);border:1.5px solid var(--border);color:var(--teal);border-radius:var(--radius-sm);padding:11px;cursor:pointer;font-family:'Nunito',sans-serif;font-size:0.78rem;font-weight:800;display:flex;align-items:center;justify-content:center;gap:6px;transition:all 0.15s;}
-.btn-action:hover{background:var(--teal-dim);color:white;border-color:var(--teal-dim);}
-.btn-action.danger:hover{background:var(--danger);color:white;border-color:var(--danger);}
-.detail-section{padding:16px 20px 0;border-bottom:1px solid var(--border);}
-.detail-section:last-child{border-bottom:none;padding-bottom:20px;}
-.ds-title{font-size:0.92rem;font-weight:900;margin-bottom:12px;}
-.ds-row{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border);gap:10px;}
-.ds-row:last-child{border-bottom:none;}
-.ds-key{font-size:0.76rem;color:var(--text-muted);font-weight:700;white-space:nowrap;}
-.ds-val{font-size:0.78rem;color:var(--text);font-weight:700;text-align:right;}
-.ds-text{font-size:0.84rem;color:var(--text-dim);line-height:1.7;padding-bottom:14px;}
-.ds-empty{font-size:0.8rem;color:var(--text-muted);font-style:italic;padding-bottom:14px;}
-.detail-photos-grid{display:flex;gap:8px;flex-wrap:wrap;padding:10px 0;}
-.detail-photo{width:86px;height:86px;border-radius:10px;object-fit:cover;cursor:pointer;border:2px solid var(--border);transition:transform 0.15s;}
-.detail-photo:hover{transform:scale(1.06);}
-.enviado-badge{display:inline-flex;align-items:center;gap:5px;border-radius:20px;padding:3px 10px;font-size:0.7rem;font-weight:800;margin-top:8px;}
-.enviado-sim{background:rgba(45,212,191,0.15);border:1px solid var(--teal);color:var(--teal);}
-.enviado-nao{background:rgba(150,150,150,0.1);border:1px solid #555;color:#888;}
-.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--surface2);color:var(--text);border:1.5px solid var(--teal);border-radius:30px;padding:10px 20px;font-size:0.84rem;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,0.4);transition:transform 0.4s cubic-bezier(.175,.885,.32,1.275),opacity 0.4s;opacity:0;z-index:9999;white-space:nowrap;}
-.toast.show{transform:translateX(-50%) translateY(0);opacity:1;}
-.lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9998;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.2s;}
-.lightbox.open{opacity:1;pointer-events:all;}
-.lightbox img{max-width:92vw;max-height:85vh;border-radius:10px;object-fit:contain;}
-.lightbox .lb-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.12);border:none;color:white;border-radius:50%;width:38px;height:38px;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.empty-state .ei">📭</div><p>Nenhum relato ainda.<br>Toque em <strong style="color:var(--teal)">+ Adicionar</strong><br>para registrar sua primeira atividade! 🌱</p></div>`;return;}c.innerHTML=d.map(r=>`<div class="list-item" onclick="irParaDetalhe(${r.id})"><div class="li-cidade">${r.cidade||'—'}</div><div class="li-escola">${r.escola||'—'}</div><div class="li-data">${r.data||'—'}</div></div>`).join('');}
+function prepararForm(id){editandoId=id;fotosTemp=[];document.getElementById('photos-row').innerHTML='';document.getElementById('form-title').textContent=id?'Editar Relato':'Novo Relato';document.getElementById('f-cidade-display').textContent=usuario.cidade;document.getElementById('f-escola-display').textContent=usuario.escola;document.getElementById('f-prof-display').textContent=usuario.nome;if(id){const r=relatos.find(x=>x.id===id);if(r){document.getElementById('f-ano').value=r.ano||'';document.getElementById('f-atividade').value=r.atividade||'';document.getElementById('f-relato').value=r.relato||'';document.getElementById('f-percepcao').value=r.percepcao||'';document.getElementById('f-destaque').value=r.destaque||'';fotosTemp=r.fotos?[...r.fotos]:[];renderFotosTemp();}}else{['f-ano','f-atividade','f-relato','f-percepcao','f-destaque'].forEach(i=>document.getElementById(i).value='');}setTimeout(()=>document.querySelector('.form-body').scrollTop=0,50);}
+async function submeterForm(){const atividade=document.getElementById('f-atividade').value.trim();const relato=document.getElementById('f-relato').value.trim();if(!atividade){toast('⚠️ Escreva o nome da atividade!');return;}if(!relato){toast('⚠️ Escreva o relato!');return;}const agora=new Date();const data=agora.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'2-digit'});const hora=agora.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});const novoRelato={id:editandoId||Date.now(),cidade:usuario.cidade,escola:usuario.escola,professora:usuario.nome,ano:document.getElementById('f-ano').value,atividade,relato,percepcao:document.getElementById('f-percepcao').value,destaque:document.getElementById('f-destaque').value,fotos:[...fotosTemp],data,hora,enviado:false};if(editandoId){const idx=relatos.findIndex(r=>r.id===editandoId);if(idx!==-1)relatos[idx]=novoRelato;}else{relatos.unshift(novoRelato);}salvarLocal();mostrarLoading('Enviando para a planilha... 📊');const ok=await enviarSheets(novoRelato);esconderLoading();if(ok){const idx=relatos.findIndex(r=>r.id===novoRelato.id);if(idx!==-1)relatos[idx].enviado=true;salvarLocal();toast('✅ Salvo e enviado para a planilha!');}else{toast('💾 Salvo! Verifique sua internet.');}voltar();}
+function renderFotosTemp(){document.getElementById('photos-row').innerHTML=fotosTemp.map((src,i)=>`<div class="photo-thumb-wrap"><img class="photo-thumb" src="${src}"><button class="photo-rm" onclick="rmFoto(${i})">✕</button></div>`).join('');}
+function rmFoto(i){fotosTemp.splice(i,1);renderFotosTemp();}
+function renderDetalhe(id){const r=relatos.find(x=>x.id===id);if(!r)return;document.getElementById('detail-header').textContent=r.escola||'';const foto1=r.fotos&&r.fotos.length?r.fotos[0]:null;const allFotos=r.fotos||[];document.getElementById('detail-body').innerHTML=`<div class="detail-photo-area">${foto1?`<img src="${foto1}" onclick="abrirLb('${foto1}')" style="cursor:pointer">`:'<div class="no-photo">📷</div>'}<span class="detail-escola-label">${r.escola||''}</span></div><div class="detail-actions"><button class="btn-action" onclick="irParaForm(${r.id})">✏️ Editar</button><button class="btn-action danger" onclick="excluir(${r.id})">🗑️ Excluir</button></div><div class="detail-section"><div class="ds-title">Informações da Atividade</div><div class="enviado-badge ${r.enviado?'enviado-sim':'enviado-nao'}">${r.enviado?'✅ Enviado para a planilha':'💾 Salvo localmente'}</div><div class="ds-row" style="margin-top:10px"><span class="ds-key">Cidade</span><span class="ds-val">${r.cidade||'—'}</span></div><div class="ds-row"><span class="ds-key">Escola</span><span class="ds-val">${r.escola||'—'}</span></div><div class="ds-row"><span class="ds-key">Professora</span><span class="ds-val">${r.professora||'—'}</span></div><div class="ds-row"><span class="ds-key">Ano escolar</span><span class="ds-val">${r.ano||'—'}</span></div><div class="ds-row"><span class="ds-key">Atividade</span><span class="ds-val">${r.atividade||'—'}</span></div><div class="ds-row"><span class="ds-key">Data</span><span class="ds-val">${r.data||''} ${r.hora||''}</span></div></div><div class="detail-section"><div class="ds-title">Relato da Atividade</div>${r.relato?`<div class="ds-text">${r.relato.replace(/\n/g,'<br>')}</div>`:'<div class="ds-empty">Não preenchido.</div>'}</div><div class="detail-section"><div class="ds-title">Percepção da Professora</div>${r.percepcao?`<div class="ds-text">${r.percepcao.replace(/\n/g,'<br>')}</div>`:'<div class="ds-empty">Não preenchido.</div>'}</div><div class="detail-section"><div class="ds-title">Momento ou Aprendizado Destacado</div>${r.destaque?`<div class="ds-text">${r.destaque.replace(/\n/g,'<br>')}</div>`:'<div class="ds-empty">Não preenchido.</div>'}</div>${allFotos.length>1?`<div class="detail-section"><div class="ds-title">Fotos da Atividade</div><div class="detail-photos-grid">${allFotos.map(f=>`<img class="detail-photo" src="${f}" onclick="abrirLb('${f}')">`).join('')}</div></div>`:''}`;}
+function excluir(id){if(!confirm('Excluir este relato?'))return;relatos=relatos.filter(r=>r.id!==id);salvarLocal();toast('🗑️ Relato excluído.');voltar();}
+function abrirLb(src){document.getElementById('lb-img').src=src;document.getElementById('lightbox').classList.add('open');}
+function fecharLb(){document.getElementById('lightbox').classList.remove('open');}
+function toast(msg,dur=3000){const t=document.getElementById('toast');t.innerHTML=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur);}
 </style>
 </head>
 <body>
 <div class="screen active" id="screen-login">
   <div style="text-align:center;width:100%;margin-bottom:20px;">
-    <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCASdBJ0DASIAAhEBAxEB/8QAHQABAAEFAQEBAAAAAAAAAAAAAAcBAgMGCAUECf/EAFwQAAIBAwINAwYHCggMBAYBBQABAgMEEQUGBxIhMUFRExQiYXGRCBYyUnKBsRUjMzQ1QlNzocEkNjdiY5Ky0RclVFV0gpOis8LS8CZDdbQnRJTD0+GVGEVHg6T/xAAcAQEAAQUBAQAAAAAAAAAAAAAABQECAwQGBwj/xABBEQEAAgECAwUDCAkEAgINAwAAAQIDBBEFITEGEhNBURYycRQiUmGBkaGxBxUjMzRCcsHRJCU14WLwQ1MXNoLx/9oADAMBAAIRAxEAPwDqAAEUxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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
+    <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCASdBJ0DASIAAhEBAxEB/8QAHQABAAEFAQEBAAAAAAAAAAAAAAcBAgMGCAUECf/EAFwQAAIBAwINAwYHCggMBAYBBQABAgMEEQUGBxIhMUFRExQiYXGRCBYyUnKBsRUjMzQ1QlNzocEkNjdiY5Ky0RclVFV0gpOis8LS8CZDdbQnRJTD0+GVGEVHg6T/xAAcAQEAAQUBAQAAAAAAAAAAAAAABQECAwQGBwj/xABBEQEAAgECAwUDCAkEAgINAwAAAQIDBBEFITEGEhNBURYycRQiUmGBkaGxBxUjMzRCcsHRJCU14WLwQ1MXNoLx/9oADAArthur66e8v6unwYmPCUjE/CD9gXwS8X7YhWOnVbyh9X3hWPBe8rPrEs8YrHgvYreGfQrjDf0S0R4L3Fe8wT4L8H7GUnp1XvKfhArwXvEnwXsaRPh+xpEx9X94r4MreD9gREer/gREfT+8is+KzP0g8YpP0i0itIvH7Y94VsIuXf5onwU3hBPXv8A2RPlqXw6FPf7orP7SsR4R+orwUrExHwkK/gUrPhr6uCtbExXwU8MKRMPRFffAr9XExPhKT9RSPBfAis+kUx9f+BFY8YfWreHj9hXvKfxIInp0+ML8MmsE/pCsS9CveX94Ur62fUncrXhEq/vYUr4RMTLp+kIn6R/hEnYrWInw/bCs/CFRK8YrXhExE9MVn6WEx8In2KREeEorxCPhExPrUr97H1v4FeEV72ETPpInwhUR9MfUrHwgrvGPDpEn7CnvK95j+T0X9MV8GkTE+pT/wZbeW/orwXg/YrfWvuyifWz8GkTMvSLeHwYrDwRSTwRWPpInxivoW+t+P6v7VffX9mUnwKPwiu6Inp1KvwgT+EV70T4xTwXvKPwv70TPis/UrHrCvnCseIUrwj7mFPiFffXuxHgncq
 " alt="Financinhas" style="width:110px;height:110px;border-radius:50%;object-fit:cover;box-shadow:0 8px 32px rgba(45,212,191,0.25);margin-bottom:10px;">
     <div style="font-size:0.62rem;font-weight:900;letter-spacing:0.18em;color:var(--text-muted);text-transform:uppercase;margin-bottom:4px;">Programa</div>
     <div style="text-align:center;margin-bottom:4px;"><div class="login-brand">FI<span class="lb">N</span>A<span class="lb">N</span>CI<span class="lb">N</span>HA<span class="lb">S</span></div></div>
@@ -171,7 +123,6 @@ body{font-family:'Nunito',sans-serif;color:var(--text);display:flex;flex-directi
 <div class="toast" id="toast"></div>
 <div class="lightbox" id="lightbox" onclick="fecharLb()"><button class="lb-close" onclick="fecharLb()">✕</button><img id="lb-img" src="" alt=""></div>
 <script>
-// SUAS CIDADES E ESCOLAS ORIGINAIS RECUPERADAS INTEGRALMENTE
 const ESCOLAS={"São Tiago": ["E.M José Aldo dos Santos", "E.E Henrique Pereira Santiago"], "Mercês de Água Limpa": ["E.M José Inacio de Abreu", "E.E de Mêrces de Água Limpa"], "Resende Costa": ["Escola Municipal Paula Assis", "E.M Conjurados Resende Costa", "E.M José Augusto de Resende", "E.M Professora Rosa", "E.M Carlos Pinto", "E.E Marcos de Oliveira Braga"], "Piedade do Rio Grande": ["E.M Professor José Edgar", "E.M Hildebrando Teixeira", "E.M Prefeito Edmundo Bosco"], "Conceição da Barra": ["E.M Professor Joaquim Pinto Lara"], "Cipotânea": ["Escola Municipal Brejauba"], "Bias Fortes": ["E.M Juscelino Manso e Peixinho Dourado", "Ponte Nova", "Várzea e Cantinho Feliz", "Antônio Lulu"], "Santana do Garambéu": ["Escola Municipal Cívico Militar Eunice Silva Moreira"]};
 const SCRIPT_URL='https://script.google.com/macros/s/AKfycbwqZ-X9_zTms0v2hG0OaKAnA0tT72Tf56K5oIdZby1W990U6i6VvN5L_Yy88_Iym6h8/exec';
 
@@ -183,12 +134,10 @@ function loginAtualizarEscolas(){const cidade=document.getElementById('l-cidade'
 
 async function carregarRelatos() {
   mostrarLoading('Sincronizando relatos antigos... ⏳');
-  // Puxa do cache local para resposta imediata
   try{relatos=JSON.parse(localStorage.getItem('relatos_' + usuario.nome + '_' + usuario.escola)||'[]');renderLista();}catch(e){relatos=[];}
   document.getElementById('uc-name').textContent=usuario.nome;
   document.getElementById('uc-school').textContent=' · '+usuario.escola;
   
-  // Requisição GET ativa para trazer relatos antigos salvos na planilha
   try {
     const urlBusca = `${SCRIPT_URL}?professora=${encodeURIComponent(usuario.nome)}&escola=${encodeURIComponent(usuario.escola)}`;
     const resp = await fetch(urlBusca);
@@ -223,17 +172,57 @@ function prepararForm(id){editandoId=id;fotosTemp=[];document.getElementById('ph
 
 async function submeterForm(){const atividade=document.getElementById('f-atividade').value.trim();const relato=document.getElementById('f-relato').value.trim();if(!atividade){toast('⚠️ Escreva o nome da atividade!');return;}if(!relato){toast('⚠️ Escreva o relato!');return;}const agora=new Date();const data=agora.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'2-digit'});const hora=agora.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});const novoRelato={id:editandoId||Date.now(),cidade:usuario.cidade,escola:usuario.escola,professora:usuario.nome,ano:document.getElementById('f-ano').value,atividade,relato,percepcao:document.getElementById('f-percepcao').value,destaque:document.getElementById('f-destaque').value,fotos:[...fotosTemp],data,hora,enviado:false};if(editandoId){const idx=relatos.findIndex(r=>r.id===editandoId);if(idx!==-1)relatos[idx]=novoRelato;}else{relatos.unshift(novoRelato);}salvarLocal();mostrarLoading('Enviando para a planilha... 📊');const ok=await enviarSheets(novoRelato);esconderLoading();if(ok){const idx=relatos.findIndex(r=>r.id===novoRelato.id);if(idx!==-1)relatos[idx].enviado=true;salvarLocal();toast('✅ Salvo e enviado para a planilha!');}else{toast('💾 Salvo! Verifique sua internet.');}voltar();}
 
-// COMPRESSOR EM CANVAS PARA REDUZIR FOTOS GIGANTES ANTES DO ENVIO
-function adicionarFotos(input){if(!input.files.length)return;mostrarLoading('Otimizando imagens... 📸');let arquivosProcessados=0;Array.from(input.files).forEach(file=>{const reader=new FileReader();reader.onload=(e)=>{const img=new Image();img.onload=()=>{const canvas=document.createElement('canvas');let w=img.width;let h=img.height;const MAX=1280;if(w>h){if(w>MAX){h*=MAX/w;w=MAX;}}else{if(h>MAX){w*=MAX/h;h=MAX;}}canvas.width=w;canvas.height=h;const ctx=canvas.getContext('2d');ctx.drawImage(img,0,0,w,h);const compressed=canvas.toDataURL('image/jpeg',0.7);fotosTemp.push(compressed);arquivosProcessados++;if(arquivosProcessados===input.files.length){esconderLoading();renderFotosTemp();}};img.src=e.target.result;};reader.readAsDataURL(file);});input.value='';}
+// ADIÇÃO ASSÍNCRONA CORRIGIDA: Processa e comprime as imagens sem travar a tela
+function adicionarFotos(input){
+  if(!input.files.length) return;
+  mostrarLoading('Otimizando imagens... 📸');
+  
+  // Cria uma lista de tarefas para processar cada foto individualmente
+  const promises = Array.from(input.files).map(file => {
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          let w = img.width;
+          let h = img.height;
+          const MAX = 1280;
+          
+          if(w > h){
+            if(w > MAX){ h *= MAX/w; w = MAX; }
+          } else {
+            if(h > MAX){ w *= MAX/h; h = MAX; }
+          }
+          
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+          
+          const compressed = canvas.toDataURL('image/jpeg', 0.7);
+          fotosTemp.push(compressed);
+          resolve(); // Finaliza a tarefa desta foto com sucesso
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  });
 
-function renderFotosTemp(){document.getElementById('photos-row').innerHTML=fotosTemp.map((src,i)=>`<div class="photo-thumb-wrap"><img class="photo-thumb" src="${src}"><button class="photo-rm" onclick="rmFoto(${i})">✕</button></div>`).join('');}
+  // Aguarda a conclusão de TODAS as fotos em paralelo para desligar o carregamento
+  Promise.all(promises).then(() => {
+    esconderLoading();
+    renderFotosTemp();
+  }).catch(() => {
+    esconderLoading();
+    toast('⚠️ Erro ao otimizar fotos.');
+  });
+  
+  input.value = '';
+}
+
 function rmFoto(i){fotosTemp.splice(i,1);renderFotosTemp();}
-
-function renderDetalhe(id){const r=relatos.find(x=>x.id===id);if(!r)return;document.getElementById('detail-header').textContent=r.escola||'';const foto1=r.fotos&&r.fotos.length?r.fotos[0]:null;const allFotos=r.fotos||[];document.getElementById('detail-body').innerHTML=`<div class="detail-photo-area">${foto1?`<img src="${foto1}" onclick="abrirLb('${foto1}')" style="cursor:pointer">`:'<div class="no-photo">📷</div>'}<span class="detail-escola-label">${r.escola||''}</span></div><div class="detail-actions"><button class="btn-action" onclick="irParaForm(${r.id})">✏️ Editar</button><button class="btn-action danger" onclick="excluir(${r.id})">🗑️ Excluir</button></div><div class="detail-section"><div class="ds-title">Informações da Atividade</div><div class="enviado-badge ${r.enviado?'enviado-sim':'enviado-nao'}">${r.enviado?'✅ Enviado para a planilha':'💾 Salvo localmente'}</div><div class="ds-row" style="margin-top:10px"><span class="ds-key">Cidade</span><span class="ds-val">${r.cidade||'—'}</span></div><div class="ds-row"><span class="ds-key">Escola</span><span class="ds-val">${r.escola||'—'}</span></div><div class="ds-row"><span class="ds-key">Professora</span><span class="ds-val">${r.professora||'—'}</span></div><div class="ds-row"><span class="ds-key">Ano escolar</span><span class="ds-val">${r.ano||'—'}</span></div><div class="ds-row"><span class="ds-key">Atividade</span><span class="ds-val">${r.atividade||'—'}</span></div><div class="ds-row"><span class="ds-key">Data</span><span class="ds-val">${r.data||''} ${r.hora||''}</span></div></div><div class="detail-section"><div class="ds-title">Relato da Atividade</div>${r.relato?`<div class="ds-text">${r.relato.replace(/\n/g,'<br>')}</div>`:'<div class="ds-empty">Não preenchido.</div>'}</div><div class="detail-section"><div class="ds-title">Percepção da Professora</div>${r.percepcao?`<div class="ds-text">${r.percepcao.replace(/\n/g,'<br>')}</div>`:'<div class="ds-empty">Não preenchido.</div>'}</div><div class="detail-section"><div class="ds-title">Momento ou Aprendizado Destacado</div>${r.destaque?`<div class="ds-text">${r.destaque.replace(/\n/g,'<br>')}</div>`:'<div class="ds-empty">Não preenchido.</div>'}</div>${allFotos.length>1?`<div class="detail-section"><div class="ds-title">Fotos da Atividade</div><div class="detail-photos-grid">${allFotos.map(f=>`<img class="detail-photo" src="${f}" onclick="abrirLb('${f}')">`).join('')}</div></div>`:''}`;}
-function excluir(id){if(!confirm('Excluir este relato?'))return;relatos=relatos.filter(r=>r.id!==id);salvarLocal();toast('🗑️ Relato excluído.');voltar();}
-function abrirLb(src){document.getElementById('lb-img').src=src;document.getElementById('lightbox').classList.add('open');}
-function fecharLb(){document.getElementById('lightbox').classList.remove('open');}
-function toast(msg,dur=3000){const t=document.getElementById('toast');t.innerHTML=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur);}
 init();
 </script>
 </body>
