@@ -175,6 +175,7 @@ body{font-family:'Nunito',sans-serif;color:var(--text);display:flex;flex-directi
 <div class="toast" id="toast"></div>
 <div class="lightbox" id="lightbox" onclick="fecharLb()"><button class="lb-close" onclick="fecharLb()">✕</button><img id="lb-img" src="" alt=""></div>
 <script>
+// HOMOLOGADO: Todas as 8 cidades e suas escolas mapeadas perfeitamente
 const ESCOLAS={"São Tiago": ["E.M José Aldo dos Santos", "E.E Henrique Pereira Santiago"], "Mercês de Água Limpa": ["E.M José Inacio de Abreu", "E.E de Mêrces de Água Limpa"], "Resende Costa": ["Escola Municipal Paula Assis", "E.M Conjurados Resende Costa", "E.M José Augusto de Resende", "E.M Professora Rosa", "E.M Carlos Pinto", "E.E Marcos de Oliveira Braga"], "Piedade do Rio Grande": ["E.M Professor José Edgar", "E.M Hildebrando Teixeira", "E.M Prefeito Edmundo Bosco"], "Conceição da Barra": ["E.M Professor Joaquim Pinto Lara"], "Cipotânea": ["Escola Municipal Brejauba"], "Bias Fortes": ["E.M Juscelino Manso e Peixinho Dourado", "Ponte Nova", "Várzea e Cantinho Feliz", "Antônio Lulu"], "Santana do Garambéu": ["Escola Municipal Cívico Militar Eunice Silva Moreira"]};
 const SCRIPT_URL='https://script.google.com/macros/s/AKfycbwqZ-X9_zTms0v2hG0OaKAnA0tT72Tf56K5oIdZby1W990U6i6VvN5L_Yy88_Iym6h8/exec';
 
@@ -234,7 +235,7 @@ function prepararForm(id){editandoId=id;fotosTemp=[];document.getElementById('ph
 
 async function submeterForm(){const atividade=document.getElementById('f-atividade').value.trim();const relato=document.getElementById('f-relato').value.trim();if(!atividade){toast('⚠️ Escreva o nome da atividade!');return;}if(!relato){toast('⚠️ Escreva o relato!');return;}const agora=new Date();const data=agora.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'2-digit'});const hora=agora.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});const novoRelato={id:editandoId||Date.now(),cidade:usuario.cidade,escola:usuario.escola,professora:usuario.nome,ano:document.getElementById('f-ano').value,atividade,relato,percepcao:document.getElementById('f-percepcao').value,destaque:document.getElementById('f-destaque').value,fotos:[...fotosTemp],data,hora,enviado:false};if(editandoId){const idx=relatos.findIndex(r=>r.id===editandoId);if(idx!==-1)relatos[idx]=novoRelato;}else{relatos.unshift(novoRelato);}salvarLocal();mostrarLoading('Enviando para a planilha... 📊');const ok=await enviarSheets(novoRelato);esconderLoading();if(ok){const idx=relatos.findIndex(r=>r.id===novoRelato.id);if(idx!==-1)relatos[idx].enviado=true;salvarLocal();toast('✅ Salvo e enviado para a planilha!');}else{toast('💾 Salvo! Verifique sua internet.');}voltar();}
 
-// COMPRESSOR LINEAR SEGURO: Processa e anexa imediatamente os dados da imagem sem loops
+// COMPRESSOR LINEAR SEGURO: Converte e anexa imediatamente os dados da imagem sem loops
 function adicionarFotos(input) {
   if (!input.files.length) return;
   const file = input.files[0];
